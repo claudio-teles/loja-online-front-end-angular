@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'loja-online-front-end-angular';
+  mensagemDeBoasVindas = 'Bem vindo a Loja Online feita com Angular e Spring';
+  nomeDoCliente = 'Olá! Faça o login para adicionar itens ao carrinho de compras.'
 }

@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+header {
+    position: -ms-page;
+    left: 0;
+    right: 0;
+    top: 0;
+    top: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#img-loja {
+    max-height: 90%;
+    max-width: 90%;
+    height: auto;
+    width: auto;
+}
+
+#primeng {
+    max-height: 10%;
+    max-width: 10%;
+    height: auto;
+    width: auto;
+    border-style: solid;
+    border-width: medium;
+}
+
+#spring {
+    max-height: 10%;
+    max-width: 10%;
+    height: auto;
+    width: auto;
+    border-style: solid;
+    border-width: medium;
+    border-color: white;
+}
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: white;
+}
+
+a:active {
+    color: white;
+}
