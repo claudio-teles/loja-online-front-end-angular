@@ -1,0 +1,51 @@
+<p [ngStyle]="{'text-align': 'center'}">
+  Produtos em Estoque
+</p>
+
+<br><br><br>
+
+<div>
+  <p-table>
+    <ng-template pTemplate="header">
+      
+      <div class="p-grid">
+        
+        <div class="p-col-12 p-md-6 p-lg-3" *ngFor="let produto of produtos;">
+          <tr>
+            <th>
+              <p>
+                <a [routerLink]="[ '/produtos', produto.idProduto ]">
+                  <iframe [src]="produto.imagemDoProduto.localDaImagem" height="330" width="330"></iframe>
+                </a>
+              </p>
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <p class="p-col-12">
+                <a [routerLink]="[ '/produtos', produto.idProduto ]">
+                  {{ produto.nomeProduto }}
+                </a>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>
+                <a [routerLink]="[ '/produtos', produto.idProduto ]">
+                  R$: {{ produto.valorProduto }}
+                </a>
+              </p>
+            </td>
+          </tr>
+        </div>
+        
+      </div>
+      
+    </ng-template>
+  </p-table>
+</div>
+
+<app-roda-pe></app-roda-pe>
+
+<router-outlet></router-outlet>

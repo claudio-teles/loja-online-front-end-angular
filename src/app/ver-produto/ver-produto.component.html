@@ -1,0 +1,71 @@
+<p>
+  Detalhe do produto: {{ id }}
+</p>
+
+<br>
+<br>
+<br>
+
+<div class="p-grid">
+  <p-table class="p-col-12">
+    <ng-template pTemplate="header">
+      <tr>
+        <th class="p-col-12">Imagem</th>
+        <th class="p-col-12">Descrição</th>
+      </tr>
+      <tr>
+        <td rowspan="10" class="p-align-stretch">
+          <iframe [src]="produtos[id - 1].imagemDoProduto.localDaImagem" [ngStyle]="{'width': '100%'}" height="330"></iframe>
+        </td>
+        <td class="p-col-12">
+          <p>ID:  {{ produtos[id - 1].idProduto }}</p>
+        </td>
+      </tr>
+      <tr>
+        <td class="p-col-12">
+          <p>Código de Barras: {{ produtos[id - 1].codigoBarra }} </p>
+        </td>
+      </tr>
+      <tr>
+        <td class="p-col-12">
+          <p>Nome: {{ produtos[id - 1].nomeProduto }} </p>
+        </td>
+      </tr>
+      <tr>
+        <td class="p-col-12">
+          <p>Valor R$: {{ produtos[id - 1].valorProduto }} </p>
+        </td>
+      </tr>
+      <tr>
+        <td class="p-col-12">
+          <p>Marca: {{ produtos[id - 1].marca }} </p>
+        </td>
+      </tr>
+      <tr>
+        <td class="p-col-12">
+          <p>Descrição: {{ produtos[id - 1].descricao }} </p>
+        </td>
+      </tr>
+      <tr>
+        <td class="p-col-12">
+          <p>Garantia: {{ produtos[id - 1].garantia }} </p>
+        </td>
+      </tr>
+      <tr>
+        <td class="p-col-12">
+          <p>Avaliação: {{ produtos[id - 1].avaliacao }} </p>
+        </td>
+      </tr>
+      <tr>
+        <td class="p-col-12">
+          <p>Gostaram: {{ produtos[id - 1].curtiu }} </p>
+        </td>
+      </tr>
+      <tr>
+        <td class="p-col-12">
+          <p>Não Gostaram: {{ produtos[id - 1].naoCurtiu }} </p>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

@@ -2,23 +2,23 @@
 <header class="ui-g-12">
   <ul>
     <li class="ui-g-12 ui-md-6 ui-lg-3">
-        <h3>
-          {{ mensagemDeBoasVindas }}!
-        </h3>
+      <h3>
+        {{ mensagemDeBoasVindas }}!
+      </h3>
     </li>
     <li class="ui-g-12 ui-md-6 ui-lg-3">
       <a href="https://angular.io" target="_blank">
-          <img id="primeng" 
-          src="https://angular.io/assets/images/logos/angular/angular.svg" 
-          alt="Logo do PrimeNG"
+        <img id="primeng" 
+        src="https://angular.io/assets/images/logos/angular/angular.svg" 
+        alt="Logo do Angular"
         >
       </a>
     </li>
     <li class="ui-g-12 ui-md-6 ui-lg-3">
       <a href="https://spring.io/" target="_blank">
-          <img id="spring" 
-          src="https://cdn.auth0.com/blog/logos/spring-boot.png" 
-          alt="Logo do Spring"
+        <img id="spring" 
+        src="https://cdn.auth0.com/blog/logos/spring-boot.png" 
+        alt="Logo do Spring"
         >
       </a>
     </li>
@@ -26,23 +26,36 @@
       {{ nomeDoCliente }}
     </li>
   </ul>
-
+  
 </header>
+
+<button *ngIf="router.url == '/'" style="font-family: 'Roboto Mono', monospace" icon="pi pi-list" pButton type="button" (click)="menuDeNavegacao = true" label="Menu de Navegação" class="ui-button-danger"></button>
+
+<p-sidebar [(visible)]="menuDeNavegacao" [baseZIndex]="10000">
+  <h1 style="font-family: 'Roboto Mono', monospace">Menu de Navegação</h1><br>
+  <a [routerLink]="[ '/lojas']">
+    <button style="font-family: 'Roboto Mono', monospace" pButton type="button" (click)="menuDeNavegacao = false" label="Loja" class="ui-button-danger"></button><br><br>
+  </a>
+  <button style="font-family: 'Roboto Mono', monospace" pButton type="button" (click)="menuDeNavegacao = false" label="Estoque" class="ui-button-danger"></button><br><br>
+  <button style="font-family: 'Roboto Mono', monospace" pButton type="button" (click)="menuDeNavegacao = false" label="Lista de produtos" class="ui-button-danger"></button>
+</p-sidebar>
+
 <div class="ui-g-12" style="text-align:center">
   <ul class="ui-g-12">
-    <li class="ui-g-12">
+    <li class="ui-g-12" *ngIf="router.url == '/'">
       <img 
-        width="300" 
-        alt="Carrinho Logo" 
-        src="https://image.freepik.com/vetores-gratis/carrinho-de-compras_6427-22.jpg"
+      id="img-carrinho"
+      width="300" 
+      alt="Carrinho Logo" 
+      src="https://image.freepik.com/vetores-gratis/carrinho-de-compras_6427-22.jpg"
       >
     </li>
-    <li class="ui-g-12">
+    <li class="ui-g-12" *ngIf="router.url == '/'">
       <img id="img-loja" src="https://image.freepik.com/vetores-gratis/e-business-conceito-vector_23-2147499037.jpg" alt="Logo da loja online">
     </li>
   </ul>
 </div>
 
-<app-roda-pe></app-roda-pe>
+<app-roda-pe *ngIf="router.url == '/'"></app-roda-pe>
 
 <router-outlet></router-outlet>
