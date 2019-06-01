@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+p {
+    font-family: 'Robot Mono', monospace;
+    font-size: 200%;
+    font-weight: 900;
+    text-align: center;
+    color: blue;
+}
+
+h1 {
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    color: red;
+}

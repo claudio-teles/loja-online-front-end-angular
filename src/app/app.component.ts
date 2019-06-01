@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { HomePageServiceService } from './home-page-service.service';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +9,9 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
 
-  constructor(public router: Router) {}
+  constructor(public router: Router, private homePage: HomePageServiceService) {}
 
-  mensagemDeBoasVindas = 'Loja Online';
+  mensagemDeBoasVindas = this.homePage.boasVindas();
   nomeDoCliente = 'Olá! Faça o login para adicionar itens ao carrinho de compras.';
   menuDeNavegacao;
 

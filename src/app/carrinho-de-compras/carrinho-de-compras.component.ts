@@ -187,7 +187,7 @@ export class CarrinhoDeComprasComponent implements OnInit {
   }
   
   ngOnInit() {
-    this.id_carrinho_de_compras = this.rota.url.substr(this.rota.url.indexOf('/') + 1, this.rota.url.lastIndexOf('/') - 1)
+    this.id_carrinho_de_compras = this.rota.url.substr(this.rota.url.lastIndexOf('/')+1, this.rota.url.length)
     console.log('Console.log: '+this.rota.url)
   }
   

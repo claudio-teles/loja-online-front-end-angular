@@ -19,7 +19,9 @@
 <p-carousel headerText="Produtos em Liquidação" [value]="produtos" numVisible="3" responsive=true>
   <ng-template let-produto pTemplate="item">
     <div [ngStyle]="{'margin-left': '50px'}">
-      <img [src]="produto.imagemDoProduto.localDaImagem" height="330" width="330">
+      <a [routerLink]="[ '/produtos', produto.idProduto ]">
+        <img [src]="produto.imagemDoProduto.localDaImagem" height="330" width="330">
+      </a>
     </div>
     <div [ngStyle]="{'text-align': 'center'}">
       <a [routerLink]="[ '/produtos', produto.idProduto]">

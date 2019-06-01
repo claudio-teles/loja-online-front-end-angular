@@ -13,13 +13,13 @@ button {
 }
 
 a:link {
-    color: white;
+    color: black;
     text-shadow: .5px .5px black;
     font-family: 'Roboto Mono', monospace;
   }
   
   a:visited {
-    color: white;
+    color: black;
     text-shadow: .5px .5px black;
     font-family: 'Roboto Mono', monospace;
   }

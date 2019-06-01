@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RodaPeComponent implements OnInit {
 
+
   contatos: string[] = [
     'https://www.facebook.com/Loja-Online',
     '@Loja-Online-Twitter',
@@ -14,9 +15,14 @@ export class RodaPeComponent implements OnInit {
     'contato@lojaonline.com'
   ]
 
-  constructor() { }
+  url: string[] = [
+    'https://www.facebook.com/',
+    'https://twitter.com/',
+    'https://www.instagram.com/?hl=pt-br'
+  ]
 
-  ngOnInit() {
-  }
+  constructor() {}
+
+  ngOnInit() {}
 
 }

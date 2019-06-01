@@ -5,5 +5,13 @@ import { Injectable } from '@angular/core';
 })
 export class HomePageServiceService {
 
-  constructor() { }
+  mensagemDeBoasVindas = '';
+
+  constructor() {}
+
+  boasVindas() {
+    this.mensagemDeBoasVindas = 'Loja Online';
+    return this.mensagemDeBoasVindas;
+  }
+
 }

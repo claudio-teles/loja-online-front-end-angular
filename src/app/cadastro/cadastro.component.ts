@@ -7,7 +7,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroComponent implements OnInit {
 
-  constructor() { }
+  clienteCadastrado = {
+    'primeiro_nome':'',
+    'sobre_nome':'',
+    'nome_de_usuario':'',
+    'senha':'',
+    'rg':'',
+    'cpf':'',
+    'rua':'',
+    'numero_da_residencia':'',
+    'complemento':'',
+    'bairro':'',
+    'cidade':'',
+    'estado':'',
+    'pais':'',
+    'tipo_de_conta':'',
+    'variacao':'',
+    'bandeira':'',
+    'nome_da_conta':'',
+    'numero_da_conta':'',
+    'mes':'',
+    'ano':''
+  }
+
+  constructor() {}
 
   ngOnInit() {
   }

@@ -8,7 +8,6 @@ import { Router } from '@angular/router';
 })
 export class VerProdutoComponent implements OnInit {
   
-  id_produto: any
   id_carrinho_de_compras: any
   produto: {}
   
@@ -36,14 +35,7 @@ export class VerProdutoComponent implements OnInit {
   }
   
   ngOnInit() {
-/*     this.id_carrinho_de_compras = 3
-    this.id_produto =  this.rota.url.substr(this.rota.url.lastIndexOf('/') + 1, this.rota.url.length)
-    console.log('Console.log: '+this.rota.url) */
-  }
-
-  ngOnChanges() {
     this.id_carrinho_de_compras = 3
-    this.id_produto =  this.rota.url.substr(this.rota.url.lastIndexOf('/') + 1, this.rota.url.length)
     console.log('Console.log: '+this.rota.url)
   }
   

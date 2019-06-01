@@ -13,3 +13,25 @@ footer {
     text-align: center;
     font-family: 'Roboto Mono', monospace;
 }
+
+a:link {
+    color: white;
+    text-shadow: .5px .5px black;
+  }
+  
+  a:visited {
+    color: white;
+    text-shadow: .5px .5px black;
+  }
+  
+  a:hover {
+    color: red;
+    text-shadow: .5px .5px blue;
+    box-shadow: .05px 3px blue;
+  }
+  
+
+  a:active {
+    color: dodgerblue;
+    text-shadow: .5px .5px black;
+  }

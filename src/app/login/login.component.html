@@ -1,3 +1,32 @@
-<p>
-  login works!
+<p [ngStyle]="{'text-align': 'center', 'font-size': '200%', 'font-weigth': 'bold', 'color': 'blue'}">
+  Cadastre - se ou faça o login, se já for cadastrado.
 </p>
+
+<br>
+
+<div class="p-grid p-dir-col" [ngStyle]="{'text-align': 'center'}">
+  <div class="p-col">
+      <a [routerLink]="[ '/clientes_cadastrados' ]">
+        <button pButton type="button" label="Fazer o cadastro" class="ui-button-danger"></button>
+      </a>
+    </div>
+  <div class="p-col" [ngStyle]="{'margin-top': '50px'}">
+    <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
+    <input type="text" pInputText placeholder="Nome de usuário" 
+    pTooltip="Digite o nome de usuário para fazer o login!" tooltipPosition="top">
+  </div>
+  <div class="p-col">
+    <input type="password" 
+    pPassword 
+    promptLabel="Digite sua senha"
+    weakLabel="Fraca"
+    mediumLabel="Média"
+    strongLabel="Forte"
+    pTooltip="Digite a senha de usuário  para fazer o login!"
+    tooltipPosition="top"
+    />
+  </div>
+  <div class="p-col">
+    <button pButton type="button" label="Fazer o login" class="ui-button-danger"></button>
+  </div>
+</div>

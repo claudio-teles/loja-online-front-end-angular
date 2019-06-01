@@ -1,5 +1,5 @@
-<p [ngStyle]="{'text-align': 'center'}">
-  Detalhe do produto: {{ id_carrinho_de_compras }}
+<p [ngStyle]="{'text-align': 'center', 'font-size': '170%', 'font-weigth': 'bold'}">
+  Detalhe do produto: {{ produto.nomeProduto }}
 </p>
 
 <br>
@@ -76,7 +76,7 @@
   <div class="p-col"></div>
   <div class="p-col"></div>
   <div class="p-col" >
-    <a [routerLink]="[ '/carrinho_de_compras', id_carrinho_de_compras, id_produto ]">
+    <a [routerLink]="[ '/carrinho_de_compras', id_carrinho_de_compras ]">
       <button class="p-col" pButton type="button" label="Adicionar ao carrinho" class="ui-button-raised ui-button-danger"></button>      
     </a>
   </div>

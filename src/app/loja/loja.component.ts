@@ -186,7 +186,6 @@ export class LojaComponent implements OnInit {
     
   }
   
-  ngOnInit() {
-  }
+  ngOnInit() {}
   
 }

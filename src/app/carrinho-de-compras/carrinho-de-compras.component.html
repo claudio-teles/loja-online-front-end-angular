@@ -19,7 +19,7 @@
   
   <div class="p-col-12 p-md-6 p-lg-3">
     <div class="p-col-3"></div>
-    <a [routerLink]="[ '/produtos']" class="p-col-4">
+    <a [routerLink]="[ '/vendas_realizadas', id_carrinho_de_compras]" class="p-col-4">
       <button style="font-family: 'Roboto Mono', monospace" pButton type="button" label="Finalizar compras" class="ui-button-danger"></button><br><br>
     </a>
     <div class="p-col-1"></div>
@@ -41,3 +41,5 @@
     </div>
   </ng-template>
 </p-carousel>
+
+<router-outlet></router-outlet>
