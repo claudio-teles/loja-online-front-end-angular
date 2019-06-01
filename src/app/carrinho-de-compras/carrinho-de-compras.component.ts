@@ -1,16 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-loja',
-  templateUrl: './loja.component.html',
-  styleUrls: ['./loja.component.css']
+  selector: 'app-carrinho-de-compras',
+  templateUrl: './carrinho-de-compras.component.html',
+  styleUrls: ['./carrinho-de-compras.component.css']
 })
-export class LojaComponent implements OnInit {
+export class CarrinhoDeComprasComponent implements OnInit {
   
+  id_carrinho_de_compras: any
   produtos: any[] = []
   
-  constructor() {
-    
+  constructor(private rota: Router) {
     this.produtos = [
       {
         "idProduto": 7,
@@ -183,10 +184,11 @@ export class LojaComponent implements OnInit {
         }
       }
     ]
-    
   }
   
   ngOnInit() {
+    this.id_carrinho_de_compras = this.rota.url.substr(this.rota.url.indexOf('/') + 1, this.rota.url.lastIndexOf('/') - 1)
+    console.log('Console.log: '+this.rota.url)
   }
   
 }

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { SidebarModule } from 'primeng/sidebar';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
+import {CarouselModule} from 'primeng/carousel';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,11 @@ import { RodaPeComponent } from './roda-pe/roda-pe.component';
 import { LojaComponent } from './loja/loja.component';
 import { ListaDeProdutosComponent } from './lista-de-produtos/lista-de-produtos.component';
 import { VerProdutoComponent } from './ver-produto/ver-produto.component';
+import { ItensMaisVistosComponent } from './itens-mais-vistos/itens-mais-vistos.component';
+import { CarrinhoDeComprasComponent } from './carrinho-de-compras/carrinho-de-compras.component';
+import { CadastroComponent } from './cadastro/cadastro.component';
+import { LoginComponent } from './login/login.component';
+import { VendasRealizadasComponent } from './vendas-realizadas/vendas-realizadas.component';
 
 @NgModule({
   declarations: [
@@ -17,14 +23,20 @@ import { VerProdutoComponent } from './ver-produto/ver-produto.component';
     RodaPeComponent,
     LojaComponent,
     ListaDeProdutosComponent,
-    VerProdutoComponent
+    VerProdutoComponent,
+    ItensMaisVistosComponent,
+    CarrinhoDeComprasComponent,
+    CadastroComponent,
+    LoginComponent,
+    VendasRealizadasComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SidebarModule,
     ButtonModule,
-    TableModule
+    TableModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

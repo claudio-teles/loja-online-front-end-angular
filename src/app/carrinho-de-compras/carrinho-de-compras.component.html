@@ -1,0 +1,43 @@
+<h1 [ngStyle]="{'text-align': 'center'}">
+  Clique no botão para finalizar a compra do(s) produto(s)
+</h1>
+
+<br>
+
+<div class="p-grid">
+  <div class="p-col-12 p-md-6 p-lg-3">
+    <div class="p-col-3"></div>
+    <a [routerLink]="[ '/produtos']" class="p-col-4">
+      <button style="font-family: 'Roboto Mono', monospace" pButton type="button" label="Voltar para produtos" class="ui-button-danger"></button><br><br>
+    </a>
+    <div class="p-col-1"></div>
+  </div>
+  
+  <div class="p-col-12 p-md-6 p-lg-3"></div>
+  
+  <div class="p-col-12 p-md-6 p-lg-3"></div>
+  
+  <div class="p-col-12 p-md-6 p-lg-3">
+    <div class="p-col-3"></div>
+    <a [routerLink]="[ '/produtos']" class="p-col-4">
+      <button style="font-family: 'Roboto Mono', monospace" pButton type="button" label="Finalizar compras" class="ui-button-danger"></button><br><br>
+    </a>
+    <div class="p-col-1"></div>
+  </div>
+</div>
+
+
+<p-carousel headerText="Produtos do carrinho de compras" [value]="produtos" numVisible="3" responsive=true>
+  <ng-template let-produto pTemplate="item">
+    <div [ngStyle]="{'margin-left': '50px'}">
+      <a [routerLink]="[ '/produtos', produto.idProduto ]">
+        <img [src]="produto.imagemDoProduto.localDaImagem" height="330" width="330">
+      </a>
+    </div>
+    <div [ngStyle]="{'text-align': 'center'}">
+      <a [routerLink]="[ '/produtos', produto.idProduto]">
+        {{ produto.nomeProduto }}
+      </a>
+    </div>
+  </ng-template>
+</p-carousel>

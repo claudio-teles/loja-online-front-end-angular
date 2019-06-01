@@ -36,8 +36,12 @@
   <a [routerLink]="[ '/lojas']">
     <button style="font-family: 'Roboto Mono', monospace" pButton type="button" (click)="menuDeNavegacao = false" label="Loja" class="ui-button-danger"></button><br><br>
   </a>
-  <button style="font-family: 'Roboto Mono', monospace" pButton type="button" (click)="menuDeNavegacao = false" label="Estoque" class="ui-button-danger"></button><br><br>
-  <button style="font-family: 'Roboto Mono', monospace" pButton type="button" (click)="menuDeNavegacao = false" label="Lista de produtos" class="ui-button-danger"></button>
+  <a [routerLink]="[ '/itens_tambem_vistos' ]">
+    <button style="font-family: 'Roboto Mono', monospace" pButton type="button" (click)="menuDeNavegacao = false" label="Itens Mais Vistos" class="ui-button-danger"></button><br><br>
+  </a>
+  <a [routerLink]="[ '/produtos' ]">
+    <button style="font-family: 'Roboto Mono', monospace" pButton type="button" (click)="menuDeNavegacao = false" label="Lista de produtos" class="ui-button-danger"></button>
+  </a>
 </p-sidebar>
 
 <div class="ui-g-12" style="text-align:center">

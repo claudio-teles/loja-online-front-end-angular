@@ -16,6 +16,7 @@ a:link {
   a:hover {
     color: red;
     text-shadow: .5px .5px black;
+    box-shadow: .05px 3px red;
   }
   
 

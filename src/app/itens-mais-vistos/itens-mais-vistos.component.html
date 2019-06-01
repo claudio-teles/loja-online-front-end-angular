@@ -1,0 +1,30 @@
+<h1 [ngStyle]="{'text-align': 'center'}">
+  Itens mais vistos pelos clientes.
+</h1>
+
+<br>
+<br>
+<br>
+
+<p-carousel headerText="Produtos mais vistos pelos clientes" [value]="produtos" numVisible="3" responsive=true>
+  <ng-template let-produto pTemplate="item">
+    <div [ngStyle]="{'margin-left': '50px'}">
+      <a [routerLink]="[ '/produtos', produto.idProduto ]">
+        <img [src]="produto.imagemDoProduto.localDaImagem" height="330" width="330">
+      </a>
+    </div>
+    <div [ngStyle]="{'text-align': 'center'}">
+      <a [routerLink]="[ '/produtos', produto.idProduto]">
+        {{ produto.nomeProduto }}
+      </a>
+    </div>
+  </ng-template>
+</p-carousel>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<router-outlet></router-outlet>

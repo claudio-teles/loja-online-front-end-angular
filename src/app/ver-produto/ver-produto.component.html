@@ -1,5 +1,5 @@
-<p>
-  Detalhe do produto: {{ id }}
+<p [ngStyle]="{'text-align': 'center'}">
+  Detalhe do produto: {{ id_carrinho_de_compras }}
 </p>
 
 <br>
@@ -15,57 +15,71 @@
       </tr>
       <tr>
         <td rowspan="10" class="p-align-stretch">
-          <iframe [src]="produtos[id - 1].imagemDoProduto.localDaImagem" [ngStyle]="{'width': '100%'}" height="330"></iframe>
+          <a>
+            <img [src]="produto.imagemDoProduto.localDaImagem" height="330" width="330">
+          </a>
         </td>
         <td class="p-col-12">
-          <p>ID:  {{ produtos[id - 1].idProduto }}</p>
-        </td>
-      </tr>
-      <tr>
-        <td class="p-col-12">
-          <p>Código de Barras: {{ produtos[id - 1].codigoBarra }} </p>
+          <p>ID:  {{ produto.idProduto }}</p>
         </td>
       </tr>
       <tr>
         <td class="p-col-12">
-          <p>Nome: {{ produtos[id - 1].nomeProduto }} </p>
+          <p>Código de Barras: {{ produto.codigoBarra }} </p>
         </td>
       </tr>
       <tr>
         <td class="p-col-12">
-          <p>Valor R$: {{ produtos[id - 1].valorProduto }} </p>
+          <p>Nome: {{ produto.nomeProduto }} </p>
         </td>
       </tr>
       <tr>
         <td class="p-col-12">
-          <p>Marca: {{ produtos[id - 1].marca }} </p>
+          <p>Valor R$: {{ produto.valorProduto }} </p>
         </td>
       </tr>
       <tr>
         <td class="p-col-12">
-          <p>Descrição: {{ produtos[id - 1].descricao }} </p>
+          <p>Marca: {{ produto.marca }} </p>
         </td>
       </tr>
       <tr>
         <td class="p-col-12">
-          <p>Garantia: {{ produtos[id - 1].garantia }} </p>
+          <p>Descrição: {{ produto.descricao }} </p>
         </td>
       </tr>
       <tr>
         <td class="p-col-12">
-          <p>Avaliação: {{ produtos[id - 1].avaliacao }} </p>
+          <p>Garantia: {{ produto.garantia }} </p>
         </td>
       </tr>
       <tr>
         <td class="p-col-12">
-          <p>Gostaram: {{ produtos[id - 1].curtiu }} </p>
+          <p>Avaliação: {{ produto.avaliacao }} </p>
         </td>
       </tr>
       <tr>
         <td class="p-col-12">
-          <p>Não Gostaram: {{ produtos[id - 1].naoCurtiu }} </p>
+          <p>Gostaram: {{ produto.curtiu }} </p>
+        </td>
+      </tr>
+      <tr>
+        <td class="p-col-12">
+          <p>Não Gostaram: {{ produto.naoCurtiu }} </p>
         </td>
       </tr>
     </ng-template>
   </p-table>
 </div>
+
+<div id="btn-carrinho" class="p-grid">
+  <div class="p-col"></div>
+  <div class="p-col"></div>
+  <div class="p-col" >
+    <a [routerLink]="[ '/carrinho_de_compras', id_carrinho_de_compras, id_produto ]">
+      <button class="p-col" pButton type="button" label="Adicionar ao carrinho" class="ui-button-raised ui-button-danger"></button>      
+    </a>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
