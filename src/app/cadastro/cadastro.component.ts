@@ -33,6 +33,11 @@ export class CadastroComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
+    
+  }
+
+  mostarFormulario() {
+    console.log('Console: ' + this.clienteCadastrado.primeiro_nome);
   }
 
 }

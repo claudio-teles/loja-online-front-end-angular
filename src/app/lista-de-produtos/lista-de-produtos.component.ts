@@ -604,7 +604,7 @@ export class ListaDeProdutosComponent implements OnInit {
         "naoCurtiu": "0",
         "imagemDoProduto": {
           "idImagem": 35,
-          "localDaImagem": "https://www.extra-imagens.com.br/TelefoneseCelulares/Smartwatches/13003968/1057583855/relogio-smartwatch-dz09-e-fone-bluetooth-original-touch-bl-13003968.jpg"
+          "localDaImagem": "https://images-na.ssl-images-amazon.com/images/I/51TRY5QdC4L.jpg"
         }
       },
       {
