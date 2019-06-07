@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-cadastro',
@@ -7,37 +7,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroComponent implements OnInit {
 
-  clienteCadastrado = {
-    'primeiro_nome':'',
-    'sobre_nome':'',
-    'nome_de_usuario':'',
-    'senha':'',
-    'rg':'',
-    'cpf':'',
-    'rua':'',
-    'numero_da_residencia':'',
-    'complemento':'',
-    'bairro':'',
-    'cidade':'',
-    'estado':'',
-    'pais':'',
-    'tipo_de_conta':'',
-    'variacao':'',
-    'bandeira':'',
-    'nome_da_conta':'',
-    'numero_da_conta':'',
-    'mes':'',
-    'ano':''
-  }
+  clienteCadastrado: {}
 
-  constructor() {}
+  @Input() primeiro_nome: string
+  @Input() sobre_nome: string
+  @Input() nome_de_usuario: string
+  @Input() senha: string
+  @Input() rg: string
+  @Input() cpf: string
+  @Input() rua: string
+  @Input() numero_da_residencia: string
+  @Input() complemento: string
+  @Input() bairro: string
+  @Input() cidade: string
+  @Input() estado: string
+  @Input() pais: string
+  @Input() tipo_de_conta: string
+  @Input() variacao: string
+  @Input() bandeira: string
+  @Input() nome_da_conta: string
+  @Input() numero_da_conta: string
+  @Input() mes: string
+  @Input() ano: string
 
-  ngOnInit() {
+  constructor() {
     
   }
 
-  mostarFormulario() {
-    console.log('Console: ' + this.clienteCadastrado.primeiro_nome);
+  ngOnInit() {
+    
   }
 
 }

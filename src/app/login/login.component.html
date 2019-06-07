@@ -13,7 +13,7 @@
   <div class="p-col" [ngStyle]="{'margin-top': '50px'}">
     <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
     <input type="text" pInputText placeholder="Nome de usuário" 
-    pTooltip="Digite o nome de usuário para fazer o login!" tooltipPosition="top">
+    pTooltip="Digite o nome de usuário para fazer o login!" tooltipPosition="top" [(ngModel)]="nome_de_usuario">
   </div>
   <div class="p-col">
     <input type="password" 
@@ -24,6 +24,7 @@
     strongLabel="Forte"
     pTooltip="Digite a senha de usuário  para fazer o login!"
     tooltipPosition="top"
+    [(ngModel)]="senha_de_usuario"
     />
   </div>
   <div class="p-col">
