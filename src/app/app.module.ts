@@ -20,6 +20,7 @@ import { CarrinhoDeComprasComponent } from './carrinho-de-compras/carrinho-de-co
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { LoginComponent } from './login/login.component';
 import { VendasRealizadasComponent } from './vendas-realizadas/vendas-realizadas.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { VendasRealizadasComponent } from './vendas-realizadas/vendas-realizadas
     PasswordModule,
     TooltipModule,
     InputTextModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

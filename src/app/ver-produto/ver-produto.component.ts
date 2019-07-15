@@ -12,15 +12,17 @@ export class VerProdutoComponent implements OnInit {
   id_carrinho_de_compras: any
   produto: {}
   
-  constructor(private rota: Router, private verProduto: VerProdutoService) {
-    
-    this.produto = this.verProduto.VerUmProduto();
-    
-  }
+  constructor(private rota: Router, private verProduto: VerProdutoService) {}
   
+  /*   Executar o projeto Back End, loja_online_back_end_spring do github: 
+  https://github.com/claudio-teles/loja_online_back_end_spring.git */
   ngOnInit() {
-    this.id_carrinho_de_compras = 3
-    console.log('Console.log: '+this.rota.url)
+    this.verProduto.VerUmProduto()
+      .subscribe(
+        respostaDoServidorTomcat => {
+          this.produto = respostaDoServidorTomcat
+        }
+      )
   }
   
 }

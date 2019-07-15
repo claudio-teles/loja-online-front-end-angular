@@ -1,0 +1,1 @@
+Bem vindo a Loja Online feito com Angular e Spring, os produtos são fictícios.

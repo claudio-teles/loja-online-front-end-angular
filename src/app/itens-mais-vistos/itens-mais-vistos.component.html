@@ -6,16 +6,16 @@
 <br>
 <br>
 
-<p-carousel headerText="Produtos mais vistos pelos clientes" [value]="produtos" numVisible="3" responsive=true>
-  <ng-template let-produto pTemplate="item">
+<p-carousel headerText="Produtos mais vistos pelos clientes" [value]="itens" numVisible="3" responsive=true>
+  <ng-template let-item pTemplate="item">
     <div [ngStyle]="{'margin-left': '50px'}">
-      <a [routerLink]="[ '/produtos', produto.idProduto ]">
-        <img [src]="produto.imagemDoProduto.localDaImagem" height="330" width="330">
+      <a [routerLink]="[ '/produtos', item.idProduto ]">
+        <img [src]="item.imagemDoProduto.localDaImagem" height="330" width="330">
       </a>
     </div>
     <div [ngStyle]="{'text-align': 'center'}">
-      <a [routerLink]="[ '/produtos', produto.idProduto]">
-        {{ produto.nomeProduto }}
+      <a [routerLink]="[ '/produtos', item.idProduto]">
+        {{ item.nomeProduto }}
       </a>
     </div>
   </ng-template>
