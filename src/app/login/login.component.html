@@ -1,5 +1,5 @@
 <p [ngStyle]="{'text-align': 'center', 'font-size': '200%', 'font-weigth': 'bold', 'color': 'blue'}">
-  Cadastre - se ou faça o login, se já for cadastrado.
+  {{ mensagem }}
 </p>
 
 <br>
@@ -13,7 +13,7 @@
   <div class="p-col" [ngStyle]="{'margin-top': '50px'}">
     <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
     <input type="text" pInputText placeholder="Nome de usuário" 
-    pTooltip="Digite o nome de usuário para fazer o login!" tooltipPosition="top" [(ngModel)]="nome_de_usuario">
+    pTooltip="Digite o nome de usuário para fazer o login!" tooltipPosition="top" [(ngModel)]="clienteLogado.nome_de_usuario">
   </div>
   <div class="p-col">
     <input type="password" 
@@ -24,10 +24,12 @@
     strongLabel="Forte"
     pTooltip="Digite a senha de usuário  para fazer o login!"
     tooltipPosition="top"
-    [(ngModel)]="senha_de_usuario"
+    [(ngModel)]="clienteLogado.senha_de_usuario"
     />
   </div>
   <div class="p-col">
-    <button pButton type="button" label="Fazer o login" class="ui-button-danger"></button>
+    <a [routerLink]="[ '/produtos' ]">
+      <button pButton type="button" label="Fazer o login" class="ui-button-danger" (click)="enviarLogin()" ></button>
+    </a>
   </div>
 </div>

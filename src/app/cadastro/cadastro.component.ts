@@ -1,4 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { CadastroService } from './cadastro.service';
+import { Cliente } from './Cliente';
 
 @Component({
   selector: 'app-cadastro',
@@ -7,35 +10,42 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CadastroComponent implements OnInit {
 
-  clienteCadastrado: {}
-
-  @Input() primeiro_nome: string
-  @Input() sobre_nome: string
-  @Input() nome_de_usuario: string
-  @Input() senha: string
-  @Input() rg: string
-  @Input() cpf: string
-  @Input() rua: string
-  @Input() numero_da_residencia: string
-  @Input() complemento: string
-  @Input() bairro: string
-  @Input() cidade: string
-  @Input() estado: string
-  @Input() pais: string
-  @Input() tipo_de_conta: string
-  @Input() variacao: string
-  @Input() bandeira: string
-  @Input() nome_da_conta: string
-  @Input() numero_da_conta: string
-  @Input() mes: string
-  @Input() ano: string
-
-  constructor() {
-    
+  clienteCadastrado: Cliente = {
+    primeiro_nome: '',
+    sobre_nome: '',
+    nome_de_usuario: '',
+    senha: '',
+    rg: '',
+    cpf: '',
+    rua: '',
+    numero_da_residencia: '',
+    complemento: '',
+    bairro: '',
+    cidade: '',
+    estado: '',
+    pais: '',
+    tipo_de_conta: '',
+    variacao: '',
+    bandeira: '',
+    nome_da_conta: '',
+    numero_da_conta: '',
+    mes: '',
+    ano: ''
   }
 
-  ngOnInit() {
-    
+  static idCliente: number
+
+  constructor(private cadastro: CadastroService) {}
+
+  ngOnInit() {}
+
+  enviarCadastro() {
+    this.cadastro.realizarCadastro(this.clienteCadastrado)
+      .subscribe(
+        respostaCadastroService => {
+          CadastroComponent.idCliente = respostaCadastroService.idCliente
+        }
+      )
   }
 
 }

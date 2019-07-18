@@ -1,5 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Login } from './Login';
+import { CadastroComponent } from '../cadastro/cadastro.component';
+import { LoginService } from './login.service';
 
 @Component({
   selector: 'app-login',
@@ -8,13 +11,27 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  login: {}
-  @Input() nome_de_usuario: string
-  @Input() senha_de_usuario: string
+  clienteLogado: Login = {
+    intensao: 'login',
+    id_cliente_logado: (CadastroComponent.idCliente - 1).toString(),
+    nome_de_usuario: '',
+    senha_de_usuario: ''
+  }
 
-  constructor(public router: Router) {}
+  mensagem: string = 'Cadastre - se ou faça o login, se já for cadastrado.'
 
-  ngOnInit() {
+  constructor(public router: Router, private login: LoginService) {}
+
+  ngOnInit() {}
+
+  enviarLogin() {
+    this.login.fazerLogin(this.clienteLogado)
+      .subscribe(
+        respostaLogin => {
+          this.mensagem = respostaLogin.text.toString()
+          console.log('Resposta: '+respostaLogin)
+        }
+      )
   }
 
 }

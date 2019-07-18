@@ -1,21 +1,19 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Mensagem } from './mensagem';
-import { Observable } from 'rxjs';
-//import axios from 'axios';
 
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HomePageServiceService {
 
-  private url: string = '../'
+  private url: string = 'http://localhost:8080'
 
   constructor(private http: HttpClient) {}
 
-  boasVindas(): Observable<Mensagem> {
-    return this.http.get<Mensagem>(this.url)
+  boasVindas(): Observable<Response> {
+    return this.http.get<Response>(this.url)
   }
 
 }

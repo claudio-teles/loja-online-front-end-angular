@@ -18,8 +18,8 @@ export class AppComponent {
   menuDeNavegacao;
  
 
-  ngOnInit() {
-    this.mensagemDeBoasVindas = this.nomeDoCliente
-  }
+    ngOnInit() {
+      
+    }
     
   }
